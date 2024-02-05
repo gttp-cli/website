@@ -8,11 +8,11 @@ export async function GET() {
         if (!response.ok) {
             throw new Error('Failed to fetch schema');
         }
-        const data = await response.json();
+        const data = await response.text()
 
-        return new Response(JSON.stringify(data), {
+        return new Response(data, {
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/yaml'
             }
         });
     } catch (e) {
