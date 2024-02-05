@@ -1,7 +1,7 @@
 import { error } from '@sveltejs/kit';
 
 export async function GET() {
-    const schemaURL = "https://raw.githubusercontent.com/gttp-cli/gttp/main/schema.json?token=GHSAT0AAAAAAB66YRC4SYHM47DMR3CC4RXSZOBAY4A";
+    const schemaURL = "https://raw.githubusercontent.com/gttp-cli/gttp/main/schema.json";
 
     try {
         const response = await fetch(schemaURL);
