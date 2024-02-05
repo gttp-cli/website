@@ -1,0 +1,6 @@
+# IDE Files
+.idea
+.vscode
+
+# Backend Data
+pb_data

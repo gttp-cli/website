@@ -1,0 +1,5 @@
+services:
+  gttp-website:
+    build: .
+    ports:
+      - "8080:8080"

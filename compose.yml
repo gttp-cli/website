@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  gttp-backend:
+    image: ghcr.io/gttp-cli/website:backend
+    build: .
+    volumes:
+      - ./pb_data:/app/pb_data
+      - ./migrations:/app/migrations
+    ports:
+      - "8080:80"
+  gttp-frontend:
+    image: ghcr.io/gttp-cli/website:frontend
+    build: ./web
+    ports:
+      - "4175:80"
