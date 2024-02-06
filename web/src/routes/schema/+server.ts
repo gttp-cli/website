@@ -15,7 +15,7 @@ export async function GET() {
                 'Content-Type': 'application/json'
             }
         });
-    } catch (e) {
+    } catch (e: any) {
         // Handle errors or invalid responses
         throw error(500, `Error fetching schema: ${e.message}`);
     }
