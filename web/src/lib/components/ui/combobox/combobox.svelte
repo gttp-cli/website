@@ -7,6 +7,7 @@
     import {tick} from "svelte"
 
     export let multi: boolean = false
+    export let placeholder: string = "Select..."
 
     export let options = [
         {value: "Option 1", label: "option 1"},
@@ -21,8 +22,8 @@
     let triggerButton // Reference to the trigger button
 
     $: selectedValue = multi
-        ? options.filter(f => value.includes(f.value)).map(f => f.label).join(", ") || "Select frameworks..."
-        : options.find(f => f.value === value)?.label ?? "Select a framework..."
+        ? options.filter(f => value.includes(f.value)).map(f => f.label).join(", ") || placeholder
+        : options.find(f => f.value === value)?.label ?? placeholder
 
     function closeAndFocusTrigger() {
         open = false
