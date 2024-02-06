@@ -26,6 +26,9 @@
         : options.find(f => f.value === value)?.label ?? placeholder
 
     function closeAndFocusTrigger() {
+        if (!open) return
+        if (multi) return
+
         open = false
         tick().then(() => {
             triggerButton.focus()
